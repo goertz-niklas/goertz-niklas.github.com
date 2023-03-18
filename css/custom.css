@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+
+body{
+  background-image:url(../img/background/nebula1.jpg);
+  background-attachment:fixed;
+  background-size:100% auto;
+}
+
+.stars1, .stars2, .stars3, .stars4, .stars5{
+  animation:infinite linear stars;
+  height: 200%;
+  width: 100%;
+  position: fixed;
+  margin-top:-500px;
+}
+
+.stars1{
+  background: url(../img/stars/stars.png);
+  animation-duration: 25s;
+}
+
+.stars2{
+  background: url(../img/stars/stars2.png);
+  animation-duration: 40s;
+}
+
+.stars3{
+  background: url(../img/stars/stars3.png);
+  animation-duration: 17s;
+}
+
+.stars4{
+  background: url(../img/stars/stars4.png);
+  animation-duration: 2.5s;
+}
+
+.stars5{
+  background: url(../img/stars/stars5.png);
+  animation-duration: 20s;
+}
+
+@keyframes stars{
+  100%{
+    background-position-y: 449px;
+  }
+}
+
+.headBanner{
+  padding-top: 45px;
+  background-image: url(../img/background/banner.svg);
+  font-size: 18px;
+  background-size: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+
+.section{
+  width:100%;
+  text-align:center;
+  transform:skewY(-3deg);
+  padding-top:40px;
+  padding-bottom:80px;
+}
+
+#section-timeline, #section-hobbys{
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+  color: #4b828b;
+}
+
+#section-skills{
+  background:rgba(0,0,0,0.8);
+  color:white;
+}
+
+#section-about{
+  margin-top:550px;
+  color:white;
+}
+
+#section-contact{
+  color:white;
+}
+
+#section-footer{
+  background: black;
+  color: white;
+  text-align: left;
+  padding-top: 100px;
+  height: 300px;
+  box-shadow: 0px -1px 0px black, 0px 290px 0px black;
+}
+
+.container{
+  max-width:1140px;
+  transform:skewY(3deg);
+}
+
+.nav-link{
+  color:white!important;
+  text-transform:uppercase;
+  font-family:'Open Sans', sans-serif;
+  font-size:25px;
+  font-weight:bold;
+}
+
+.nav-link:hover{
+  background: #7ceac9;
+  color: black!important;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 4px;
+}
+
+.navbar-dark .navbar-toggler{
+  color: white;
+  font-weight: bold;
+  border: 2px solid;
+  padding-bottom: 7px;
+}
+
+.firstTitle{
+  font-family:'Open Sans', sans-serif;
+  text-transform:uppercase;
+  margin-top: 90px;
+  margin-bottom: -20px;
+}
+
+.secondTitle{
+  font-size:120px;
+  font-family:'Roboto', sans-serif;
+  font-weight:bold;
+  text-transform:uppercase;
+  transform:skewY(-3deg);
+  margin-bottom: -20px;
+}
+
+.thirdTitle{
+  font-size:25px;
+  font-family:'Open Sans', sans-serif;
+}
+
+.timelineCol{
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.skillHeading{
+  color:grey;
+}
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+  text-align: left;
+}
+
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+
+ul.timeline>li {
+  margin: 20px 0;
+  padding-left: 5px;
+}
+
+ul.timeline>li:before {
+  content: ' ';
+  background: black;
+  display: inline-block;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid #f7f5f5;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+.sBr{
+  height:10px;
+}
+
+.bBr{
+  width: 100%;
+  height:50px;
+}
+
+.dark{
+  background-color:black;
+}
+
+#astronaut{
+  background: url(../img/astronaut/idle0.gif);
+  background-repeat: no-repeat;
+  animation: astronaut 4s infinite alternate-reverse ease-in-out;
+  width:125px;
+  height:278px;
+  margin:0 auto;
+  margin-top:-390px;
+  margin-left:-72px;
+  position: absolute;
+  left: 50%;
+  cursor: pointer;
+}
+
+#bubble{
+  text-align: center;
+  color: white;
+  display: none;
+  opacity: 0;
+  width: auto;
+  background: black;
+  position: absolute;
+  left: 110%;
+  top: 13px;
+  padding: 5px;
+  animation: bubbleAnimation 1s ease-in-out;
+  font-size: 20px;
+}
+
+#bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid black;
+  border-top: 10px solid black;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 0px;
+}
+
+#bubble::selection {
+  background: black;
+}
+
+#bubble::-moz-selection {
+  background: black;
+}
+
+@keyframes bubbleAnimation{
+  0% { opacity: 1 }
+  90% {opacity: 1 }
+  100% { opacity: 0 }
+}
+
+@keyframes astronaut{
+  100%{
+    margin-top: -290px;
+    transform: rotate(-6deg);
+  }
+}
+
+.skill{
+  text-align: center;
+}
+
+.skillImg{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.skillImgAutomation{
+  animation: skillAutomation 9s infinite ease-in-out;
+}
+
+@keyframes skillAutomation{
+  2%{
+    filter: drop-shadow(0px 0px 14px white);
+    transform: scale(1.1);
+  }
+  7%{
+    filter:none;
+    transform: scale(1);
+  }
+}
+
+.skillTag{
+  margin-bottom: 0px;
+}
+
+.getInTouch{
+  margin-top: 30px;
+  margin-bottom: 5px;
+  width: 70px;
+}
+
+.getInTouchMailaddress{
+  color:white;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#contactBorder{
+  max-width: 700px;
+  margin: 0 auto;
+  border: 4px solid white;
+  margin-top: 120px;
+  margin-bottom:70px;
+  cursor: text;
+}
+
+#contactRocket{
+  float: left;
+  width: 50px;
+  height: 100%;
+  padding: 7px;
+  transition: 400ms;
+  margin-left:4px;
+}
+
+.contactFakeInput{
+  height: 50px;
+  padding-top: 1px;
+  text-align: left;
+  font-size: 30px;
+  color:white;
+  animation: fakeInputAnimation 1s infinite;
+  margin-left: 58px;
+}
+
+@keyframes fakeInputAnimation{
+  100%{
+    color:transparent;
+  }
+}
+
+.rocketWiggle{
+  animation: rocketWiggle 1s infinite ease-in-out;
+  transform: rotate(45deg);
+}
+
+@keyframes rocketWiggle{
+  10%{
+    margin-top:-1px;
+  }
+  50%{
+    margin-top:3px;
+  }  
+  100%{
+    margin-top:1px;
+  }
+}
+
+/*
+-
+- SMALL DEVICES
+-
+*/
+
+@media (max-width: 1900px){
+  body {
+    background: rgb(41,40,48);
+    background: -moz-linear-gradient(86deg, rgba(41,40,48,1) 0%, rgba(0,0,0) 100%);
+    background: -webkit-linear-gradient(86deg, rgb(0, 0, 0) 0%, rgba(50,71,88,1) 100%);
+    background: linear-gradient(86deg, rgba(41,40,48,1) 0%, rgb(0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#292830",endColorstr="#000",GradientType=1);
+}
+  
+.headBanner{
+  padding-top: 0px;
+  background-image: none;
+  font-size: auto;
+  background-size: auto;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+  #section-skills{
+    background:none;
+  }
+}
+
+@media (max-width: 992px){
+  .secondTitle{
+    font-size:90px;
+  }
+}
+
+@media (max-width: 768px){
+  .secondTitle{
+    font-size:70px;
+  }
+  
+  #section-footer{
+    padding-top: 50px;
+  }
+
+  .firstTitle{
+    margin-top: 40px;
+    margin-bottom: -5px;
+  }
+
+  .secondTitle{
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px){
+  .secondTitle{
+    font-size:40px;
+  }
+
+  .skillImg{
+    width: 70px;
+    height: 70px;
+  }
+
+  .col4{
+    max-width: 33%;
+  }
+
+  .skillTag{
+    font-size: 13px;
+  }
+}
