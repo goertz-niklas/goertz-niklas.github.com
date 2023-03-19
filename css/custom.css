@@ -66,7 +66,7 @@ body{
 #section-timeline, #section-hobbys{
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
-  color: #4b828b;
+  color: #214f6a;
 }
 
 #section-skills{
